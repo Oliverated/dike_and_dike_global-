@@ -1,0 +1,571 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --primary: #9e2402 ;
+--secondary: #fda831;
+--accent: grey;
+--secondary-lit:#f9e8cf;
+--text:white;
+--ff: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #284e8c;        /* The dark navy from "DIKE & DIKE" and the roof outline */
+  --secondary: #0088CC;      /* The bright blue from the "GLOBAL LTD" banner and text */
+  --accent: #58A7E0;         /* The medium blue found in the pipeline water and highlights */
+  --secondary-lit: #C4E4F9;  /* A very light, clear blue for backgrounds, overlays, or borders */
+  --text: #ffffff;           /* Set to white for use on dark primary or secondary backgrounds */
+  --text-dark: #12284C;      /* Add this for standard text on a white website background */
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--background);
+  font-family: var(--ff);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.special{
+  color: var(--primary);
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* nav bar */
+.cover-bg {
+  background-color: transparent;
+  position: fixed;
+  display: none;
+}
+
+header {
+  margin: auto;
+  justify-content: center;
+  width: 90%;
+}
+
+header nav.match {
+  /* box-shadow: 0 0 10px 0 var(--primary); */
+  background-color: var(--secondary);
+  align-items: center;
+}
+
+header .harm {
+  display: none;
+}
+
+.cancel {
+  display: none;
+}
+
+nav {
+  background-color: #67666620;
+  backdrop-filter: blur(50px);
+  position: fixed;
+  top: 3vh;
+  width: 90%;
+  height: 15vh;
+  align-content: center;
+  /* align-items: center; */
+  z-index: 100;
+  border-radius: 20px; /* More rounded for modern look */
+  margin: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.nav-logo{
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.nav-logo img {
+    width: 10%;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 95%;
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  width: 40%;
+}
+
+.nav-list a {
+color: var(--text);
+  font-size: 15px;
+  transition: 300ms;
+  position: relative;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--text);
+  transition: 300ms;
+  border-radius: 2px;
+  transform: translateY(15px);
+}
+
+.nav-list a:hover::before {
+  width: 90%;
+    transform: translateY(8px);
+}
+
+.nav-list a.nav_locate {
+  color: var(--accent);
+}
+
+
+/* nav ends */
+/* section{
+  height: 100vh;
+} */
+/* elephant-sector */
+.elephant-sector{
+  background-image:linear-gradient(#8057000e, #0f0300), url(/asset/img/medium-shot-people-travel-agency.jpg);
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-content: end;
+  text-align: start;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  color: var(--text);
+  /* background-position: ; */
+}
+
+.elephant-title{
+
+  /* color: var(--primary); */
+}
+
+.elephant-sector h2{
+  color: var(--secondary);
+  align-items: center;
+  font-size: 40px;
+}
+
+.elephant-sector a{
+  color: var(--secondary-lit);
+  font-size: 25px;
+}
+
+.elephant-sector span{
+  color: var(--secondary);
+  font-size: 25px;
+}
+
+
+  
+/* Footer Styles */
+footer {
+    background-color: #0f0f0f; /* Premium dark grey */
+    color: var(--text);
+    padding-top: 3%;
+    font-family: var(--ff);
+    /* margin-top: 80px; */
+    /* border-top removed as requested */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: auto;
+    gap: 50px;
+}
+
+.footer-section {
+    min-width: 20%;
+}
+
+.footer-section h3 {
+    font-size: 30px;
+    margin-bottom: 5%;
+    color: var(--secondary);
+    position: relative;
+    padding-bottom: 2%;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary); /* Changed to secondary for better visibility */
+}
+
+.footer-section.about{
+    width: 35%;
+    /* background-color: aqua; */
+}
+
+.footer-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var();
+    font-size: 20px;
+}
+
+.footer-section .highlight {
+    color: var(--secondary); 
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    color: white;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent for better blending */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    /* border: 1px solid transparent; */
+}
+
+.socials a:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Links */
+.links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.links ul li {
+    margin-bottom: 12px;
+}
+
+.links ul li a {
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.links ul li a:hover {
+    color: var(--secondary);
+    padding-left: 8px;
+    text-shadow: 0 0 10px rgba(253, 168, 49, 0.3);
+}
+
+/* Contact */
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact p a {
+    color: #e0e0e0;
+    transition: 0.3s;
+}
+
+.contact p a:hover {
+    color: var(--secondary);
+}
+
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    height: 8vh;
+    opacity: .6;
+    margin-top: 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    color: var(--text);
+    align-content: center;
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* nav bar */
+  header {
+    padding-bottom: 0;
+  }
+  header .harm {
+    display: block;
+    position: fixed;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 30px;
+    z-index: 50;
+    color: var(--accent);
+  }
+
+  .harm.active {
+    display: none;
+  }
+
+  .cover-bg {
+    /* backdrop-filter: blur(20px); */
+    background-color: #000000ba;
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    display: block;
+    left: 180vw;
+    transition: 500ms;
+    top: 0;
+    z-index: 4;
+  }
+  .cover-bg.active {
+    left: 0vw;
+  }
+
+  nav {
+    top: 0;
+    height: 100vh;
+    width: 60%;
+    align-content: start;
+    border-radius: 0 10px 0px 0;
+    transition: 1000ms;
+    left: -100vw;
+    box-shadow: 0 0 0px 2px var(--primary);
+  }
+  header nav.active {
+    left: 0vw;
+  }
+
+  .nav-logo{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.nav-logo img {
+    width: 20%;
+}
+
+  header .menu {
+    display: block;
+    margin: 8% 5%;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 8%;
+    margin-left: 3%;
+  }
+
+  .nav-list li {
+    margin-top:3%;
+    width: 100%;
+  }
+
+  .nav-list a {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+  }
+
+  .nav-list a:hover::before {
+  width: 30%;
+    transform: translateY(8px);
+}
+
+
+/* elephant-sector */
+.elephant-sector{
+  width: 95%;
+  margin:2% auto;
+  border-radius: 15px;
+  height: 70vh;
+  padding-left: 4%;
+  padding-bottom: 3%;
+}
+
+.elephant-sector h2{
+  color: var(--secondary);
+  align-items: center;
+  font-size: 25px;
+}
+
+.elephant-sector a{
+  font-size: 15px;
+}
+
+.elephant-sector span{
+  font-size: 15px;
+}
+
+
+
+  /* Footer Styles */
+
+.footer-content {
+    width:100%;
+    margin: auto;
+    gap: 30px;
+}
+
+.footer-section {
+    min-width: 95%;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+
+.footer-section.about p{
+    width: 80%;
+    /* background-color: aqua; */
+}
+
+.footer-section p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    width: 30px;
+    height: 30px;
+}
+
+.icon {
+    width: 35px;
+    padding: 10%;
+}
+
+/* Links */
+
+.links ul li a {
+    font-size: 15px;
+}
+
+.footer-section.contact p{
+      line-height: .5;
+      margin-top: 3%;
+}
+
+}
+/* nav ends */
+
+@media (max-width: 600px) {
+  /* nav bar */
+.nav-logo{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.nav-logo img {
+    width: 25%;
+}
+  .nav-list li {
+    margin-top: 1%;
+    margin-left: 10%;
+  }
+
+  .nav-list a {
+    font-size: 15px;
+  }
+
+  /* footer phone */
+
+  .footer-section.contact p{
+      line-height: .8;
+      margin-top: 4%;
+}
+
+.socials a {
+    width: 45px;
+    height: 45px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+      .footer-content {
+        gap: 40px;
+    }
+    
+   .footer-section {
+    min-width: 90%;
+    margin-left: 3%;
+padding-top: 5%;
+}
+}

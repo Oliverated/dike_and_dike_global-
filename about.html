@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+/* About Section */
+/* .about-sector {
+    padding: 80px 0;
+    background-color: #fff;
+} */
+
+.about-grid {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Image Side */
+.about-image {
+    position: relative;
+    padding-top: 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px var(--accent); /* Matches your brand accent color */
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: var(--primary-color, #0056b3);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Content Side */
+.sub-title {
+    color: var(--accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.about-features li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    color: #444;
+}
+
+/* Simple checkmark bullet */
+.about-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: 2; /* Image goes below text on mobile */
+        margin-top: 40px;
+    }
+}
+
+
+
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+<section class="about-sector container">
+  <div class="about-grid">
+    <div class="about-image">
+      <img src="assets/img/Gemini_Generated_Image_66uvyb66uvyb66uv.png" alt="Professional Plumbing Work">
+      <div class="experience-badge">
+        <span class="years">10+</span>
+        <span class="text">Years of Excellence</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <span class="sub-title">Who We Are</span>
+      <h2>Reliable Plumbing Solutions <br>for a Modern World</h2>
+      <p>
+        Dike & Dike Global LTD started with a simple mission: to provide high-quality, 
+        durable plumbing solutions that homeowners and businesses can rely on. 
+        We specialize in advanced leak detection, pipe restoration, and industrial 
+        plumbing installations.
+      </p>
+      
+      <ul class="about-features">
+        <li><strong>Expert Technicians:</strong> Certified professionals for every job.</li>
+        <li><strong>24/7 Availability:</strong> Because leaks don't wait for business hours.</li>
+        <li><strong>Quality Guaranteed:</strong> We use the best materials to ensure long-term fixes.</li>
+      </ul>
+
+      <a href="services.html" class="btn-cta">Learn More About Us</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
