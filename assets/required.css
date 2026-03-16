@@ -86,14 +86,13 @@ header .harm {
 }
 
 nav {
-  background-color: #67666620;
+  background-color: #00000097;
   backdrop-filter: blur(50px);
   position: fixed;
   top: 3vh;
   width: 90%;
   height: 15vh;
   align-content: center;
-  /* align-items: center; */
   z-index: 100;
   border-radius: 20px; /* More rounded for modern look */
   margin: auto;
@@ -544,28 +543,40 @@ footer {
   }
 
   /* footer phone */
+      
+   .footer-section {
+    margin-left: 3%;
+padding-top: 1%;
+}
+  
+.footer-section h3 {
+    font-size: 15px;
+    margin-bottom: 1%;
+}
+
+.footer-content p, .links ul li a{
+  font-size: 12px;
+}
 
   .footer-section.contact p{
       line-height: .8;
       margin-top: 4%;
+   
 }
 
 .socials a {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
 }
 
 .icon {
     width: 30px;
     height: 30px;
 }
-      .footer-content {
-        gap: 40px;
-    }
-    
-   .footer-section {
-    min-width: 90%;
-    margin-left: 3%;
-padding-top: 5%;
+
+.footer-bottom {
+    font-size: 12px;
 }
+
+
 }

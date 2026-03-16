@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+
+
+
+/* destination sector */
+.country-sector{
+    margin-top: 3%;
+}
+
+.country-block {
+    display: flex;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
+    padding: 3% 2%;
+    scrollbar-width: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+/* Specific Grid Layout for Destinations Page */
+.destinations-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 3% 5%;
+    overflow: visible !important;
+    justify-content: center;
+}
+
+.destinations-grid .country-card {
+    min-width: auto;
+    /* Override fixed width */
+    width: 100%;
+}
+
+.country-card {
+    height: 400px;
+    min-width: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    background-color: var(--secondary-lit);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.991), transparent);
+    color: white;
+    z-index: 1;
+    transform: translateY(40px);
+    transition: transform 0.5s ease;
+}
+
+.country-card:hover .card-content {
+    transform: translateY(0);
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    font-family: var(--ff);
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: .8rem;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.1s;
+    font-family: var(--ff);
+    height: 2rem;
+}
+
+.country-card:hover .card-content p {
+    opacity: 1;
+}
+
+/* Background Images */
+.country-card.kyoto {
+    background-image: url('tour-location/kyoto.jpg');
+}
+
+.country-card.egypt {
+    background-image: url('tour-location/egypt.jpg');
+}
+
+.country-card.london {
+    background-image: url('tour-location/london.jpg');
+}
+
+.country-card.nairobi {
+    background-image: url('tour-location/nairobi-easter.jpg');
+}
+
+.country-card.qatar {
+    background-image: url('tour-location/qatar.jpg');
+}
+
+.country-card.seychelles {
+    background-image: url('tour-location/seychelles.jpg');
+}
+
+.country-card.singapore {
+    background-image: url('tour-location/singapore.jpg');
+}
+
+
+
+
+
+
+
+
+
+        .services-sector{
+    padding:80px 10%;
+    background:var(--secondary-lit);
+}
+
+.services-title{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:50px;
+    font-family:var(--ff);
+}
+
+.services-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+.service-card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+    font-size:1.2rem;
+}
+
+.service-card p{
+    font-size:.9rem;
+    color:#555;
+}
+    </style>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/required.css" />
+  <script defer src="assets/main.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- nav > start -->
+  <div class="cover-bg"></div>
+  <header>
+    <span class="harm">&#9776;</span>
+    <nav>
+      <div class="menu">
+        <a class="nav-logo" href="/">
+          <img src="assets/img/IMG_20260311_132825_166.png" alt="Dike Logo" />
+          <span>Dike & Dike Global LTD</span>
+        </a>
+
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+    <section class="services-sector">
+    <h2 class="services-title">Our Plumbing & Borehole Materials</h2>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <h3>Water Closets (WC)</h3>
+            <p>Quality toilet systems suitable for residential and commercial buildings.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Bath Tubs</h3>
+            <p>Modern and durable bath tubs designed for comfort and luxury bathrooms.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Kitchen Sinks</h3>
+            <p>Strong stainless steel and ceramic sinks for modern kitchens.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Wash Hand Basins</h3>
+            <p>Stylish WHB designs perfect for homes, hotels, and offices.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Water Heaters</h3>
+            <p>Efficient water heaters providing reliable hot water solutions.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>PVC & Copper Fittings</h3>
+            <p>Durable plumbing fittings suitable for all piping installations.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Sumo Pumps</h3>
+            <p>High-performance pumps for borehole and water supply systems.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Casing Pipes</h3>
+            <p>Strong borehole casing pipes designed for long-term durability.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Surface Pumps</h3>
+            <p>Reliable surface pumps for water transfer and pressure systems.</p>
+        </div>
+
+
+
+    </div>
+
+
+
+        <div class="country-block">
+      <div class="country-card" style="background-image: url(asset/img/car-g.jpg);">
+        <div class="card-content">
+          <h3>Exotic Transport</h3>
+          <p>We take you to where you want to be with cars that fits your status</p>
+        </div>
+      </div>
+
+      <div class="country-card nairobi" style="background-image: url(asset/img/pngwing.com\ \(25\).png);">
+        <div class="card-content">
+          <h3>Visa Assistance</h3>
+          <p>Our experts provide guidance to maximize your chances of approval.</p>
+        </div>
+      </div>
+
+      <div class="country-card egypt" style="background-image: url(asset/img/pngwing.com\ \(24\).png)">
+        <div class="card-content">
+          <h3>Flight Booking</h3>
+          <p>We handle all your flight arrangements.</p>
+        </div>
+      </div>
+
+      <div class="country-card london" style="background-image: url(asset/img/pngwing.com\ \(28\).png);">
+        <div class="card-content">
+          <h3>Hotel Reservation</h3>
+          <p>Stay in comfort. We partner with top-rated hotels worldwide.</p>
+        </div>
+      </div>
+
+      <div class="country-card london" style="background-image: url(asset/img/pngwing.com\ \(28\).png);">
+        <a href="services.html" class="card-content">
+          <h3>View All</h3>
+          <p>Checkout all our exclusive services</p>
+        </a>
+      </div>
+
+    </div>
+</section>
+</body>
+</html>

@@ -61,8 +61,8 @@
 
 /* About Section */
 .about-sector {
-width: 90%;
-margin: 5% auto;
+  width: 90%;
+  margin: 8% auto;
 }
 
 .about-grid {
@@ -87,7 +87,7 @@ margin: 5% auto;
   position: absolute;
   bottom: -30px;
   right: 20px;
-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px);
   color: var(--text);
   padding: 20px;
   border-radius: 10px;
@@ -99,23 +99,23 @@ backdrop-filter: blur(80px);
   display: block;
   font-size: 30px;
   font-weight: bold;
-
 }
 
-.experience-badge i{
+.experience-badge i {
   color: var(--secondary-lit);
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.experience-badge .exp{
-font-size: 20px;
-opacity: .6;
+.experience-badge .exp {
+  font-size: 20px;
+  opacity: 0.6;
 }
 
 /* Content Side */
-.about-content{
-    width: 60%;
+.about-content {
+  width: 60%;
 }
+
 .sub-title {
   color: var(--secondary);
   font-weight: bold;
@@ -124,12 +124,14 @@ opacity: .6;
   display: block;
   margin-bottom: 10px;
   font-size: 25px;
+  text-align: center;
 }
 
 .about-content h2 {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 2%;
   line-height: 1.2;
+  text-align: center;
 }
 
 .about-content p {
@@ -138,222 +140,568 @@ opacity: .6;
   margin-bottom: 25px;
 }
 
-.about-btn{
-color: var(--text);
-    display: block;
-  width:fit-content;
+.about-btn {
+  color: var(--text);
+  display: block;
+  width: fit-content;
   font-size: 20px;
   padding: 3% 6%;
   border-radius: 8px;
   background-color: var(--primary);
+  align-items: center;
 }
 
-/* Responsive adjustment TAB*/
-@media (max-width: 768px) {
-
-.hero-sector {
-  height: 90vh;
-  display: flex;
-  padding-bottom: 5vh;
+/* Service Section */
+.services-sector {
+  width: 95%;
+  text-align: center;
+padding-top: 1%;
 }
-
-.hero-block {
-  width: 90%;
-  padding-left: 2%;
-  margin-left: 3%;
-  padding-bottom: 1%;
-}
-
-.hero-block span {
-  font-size: 15px;
-}
-
-.hero-block h2 {
+.services-sector .section-header h2 {
   font-size: 30px;
 }
 
-.hero-block h5 {
-  opacity: 0.8;
-  font-size: 20px;
+
+.services-block {
+    display: flex;
+    gap: 5%;
+    padding: 4% 3% 2.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
-.hero-btns {
-  margin-top: 3%;
-  gap: 3%;
+.country-card {
+    flex: 0 0 min(70vw, 450px);
+    aspect-ratio: 4/ 4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    scroll-snap-align: center;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
-.hero-btns a {
-  font-size: 15px;
-  padding: 2% 3%;
-  border-radius: 8px;
+.country-card:focus-within,
+.country-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* About Section */
-.about-sector {
-width: 90%;
-margin: 5% auto;
-}
-
-.about-grid {
-  display: flex;
-  flex-direction: column;
-  /* gap: 100px; */
-}
-
-/* Image Side */
-.about-image img {
-  width: 90%;
-  border-radius: 10px;
-  box-shadow: 20px 20px 0px var(--secondary); /* Matches your brand accent color */
-}
-
-.experience-badge {
-  bottom: -35px;
-  right: 1px;
-  color: white;
-  padding: 3%;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 5px 10px 20px #000a2977;
-}
-
-.experience-badge .years {
-  display: block;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.experience-badge .exp{
-font-size: 15px;
-}
-
-/* Content Side */
-.about-content{
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-}
-.sub-title {
-  letter-spacing: 2px;
-  margin-bottom: 1%;
-  font-size: 20px;
+    padding: 5%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.55), transparent);
+    color: white;
+    z-index: 1;
+    transform: translateY(50px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    opacity: 0;
+    /* padding-bottom: %; */
 }
 
-.about-content h2 {
+.country-card:hover .card-content,
+.country-card:focus-within .card-content {
+  opacity: 1;
+    transform: translateY(0);
+}
+
+.card-content h3 {
+    font-size: 25px;
+    color: var(--secondary-lit);
+}
+
+.card-content p {
+    font-size: 15px;
+    border-top: 1px solid var(--text);
+    padding-top: 3%;
+    width: 95%;
+    margin: auto;
+    text-align: start;
+}
+
+.card-content .small, .small-p{
+      border-top: 0px solid var(--text);
+      font-size: 15px;
+}
+
+.service-btn{
+    color: var(--primary);
+    font-weight: bold;
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+  padding: 3% 6%;
+  border-radius: 10px;
+  background-color: var(--secondary-lit);
+  align-items: center;
+  width: 100%;
+  margin-top: 8%;
+}
+
+/* .service-ca */
+
+.country-card:hover .card-content p,
+.country-card:focus-within .card-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* testimony */
+.testimony-sector {
+    margin: 5% auto;
+    padding-bottom: 2%;
+}
+
+.testimony-sector h3{
+  color: var(--secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.testimony-container {
+    display: flex;
+    justify-items: center;
+    gap: 3%;
+    width: 98%;
+    margin: auto;
+    margin-top: 3%;
+        scrollbar-width: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.testimony-block {
+    background-color: var(--secondary-lit);
+    border-radius:10px;
+margin: 1% 0.1%;
+    min-width: 420px;
+    max-height: 400px;
+    padding-bottom: 2%;
+        scroll-snap-align: center;
+}
+
+.testimony-text {
+    width: 90%;
+    margin: auto;
+}
+
+.testimony-block svg {
+    width: 5rem;
+    color: var(--secondary);
+}
+
+.testimony-block p {
+    font-size: 20px;
+    
+}
+
+.testimony-block em {
+    display: block;
+    text-align: end;
+    margin-top: 5%;
+    color: var(--primary);
+    padding-right: 5%;
+}
+
+
+/* Responsive adjustment TAB*/
+@media (max-width: 768px) {
+  .hero-sector {
+    height: 90vh;
+    display: flex;
+    padding-bottom: 5vh;
+  }
+
+  .hero-block {
+    width: 90%;
+    padding-left: 2%;
+    margin-left: 3%;
+    padding-bottom: 1%;
+  }
+
+  .hero-block span {
+    font-size: 15px;
+  }
+
+  .hero-block h2 {
+    font-size: 30px;
+  }
+
+  .hero-block h5 {
+    opacity: 0.8;
+    font-size: 20px;
+  }
+
+  .hero-btns {
+    margin-top: 3%;
+    gap: 3%;
+  }
+
+  .hero-btns a {
+    font-size: 15px;
+    padding: 2% 3%;
+    border-radius: 8px;
+  }
+
+  /* About Section */
+  .about-sector {
+    width: 90%;
+    margin: 5% auto;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    /* gap: 100px; */
+  }
+
+  /* Image Side */
+  .about-image img {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px var(--secondary); /* Matches your brand accent color */
+  }
+
+  .experience-badge {
+    bottom: -35px;
+    right: 1px;
+    color: white;
+    padding: 3%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 10px 20px #000a2977;
+  }
+
+  .experience-badge .years {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .experience-badge .exp {
+    font-size: 15px;
+  }
+
+  /* Content Side */
+  .about-content {
+    width: 100%;
+  }
+  .sub-title {
+    letter-spacing: 2px;
+    margin-bottom: 1%;
+    font-size: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 25px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+    margin-bottom: 2%;
+  }
+
+  .about-btn {
+    font-size: 15px;
+    padding: 2% 4%;
+    border-radius: 5px;
+  }
+
+  .services-sector .section-header h2 {
+    font-size: 28px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .services-sector .section-header p {
+    font-size: 16px;
+  }
+
+
+  
+/* Service Section */
+
+.services-sector .section-header h2 {
+  font-size: 25px;
+margin-bottom: 0%;
+}
+
+
+.services-block {
+    gap: 8%;
+    padding: 8% 3% 2.8rem;
+}
+
+
+.card-content h3 {
+    font-size: 20px;
+}
+
+.card-content p {
+    font-size: 15px;
+}
+
+.card-content .small, .small-p{
+      font-size: 15px;
+}
+
+.service-btn{
+  font-size: 15px;
+}
+
+/* testimony */
+
+
+.testimony-sector h3{
   font-size: 25px;
 }
 
-.about-content p {
-  font-size: 15px;
-  margin-bottom: 2%;
+.testimony-block{
+      padding: 3% 0;
 }
 
-.about-btn{
-  font-size: 15px;
-  padding: 2% 4%;
-  border-radius: 5px;
+.testimony-container {
+    gap: 5%;
 }
 
-
+.testimony-block svg {
+    width: 4rem;
 }
 
+.testimony-block p {
+    font-size:15px;
+    line-height: 1.5;
+}
+
+.testimony-block em {
+font-size: 18px;
+}
+
+}
 
 /* Responsive adjustment MOBILE*/
 @media (max-width: 600px) {
+  .hero-sector {
+    height: 50vh;
+    display: flex;
+    padding-bottom: 5vh;
+    background-position: left;
+  }
 
-.hero-sector {
-  height: 50vh;
-  display: flex;
-  padding-bottom: 5vh;
-  background-position: left;
+  .hero-block {
+    width: 90%;
+    padding-left: 2%;
+    margin-left: 3%;
+    padding-bottom: 1%;
+  }
 
+  .hero-block span {
+    font-size: 13px;
+  }
+
+  .hero-block h2 {
+    font-size: 25px;
+  }
+
+  .hero-block h5 {
+    font-size: 15px;
+  }
+
+  .hero-btns {
+    margin-top: 3%;
+    gap: 3%;
+  }
+
+  .hero-btns a {
+    font-size: 13px;
+    padding: 3% 5%;
+    border-radius: 8px;
+  }
+
+  /* About Section */
+  .about-sector {
+    width: 95%;
+    margin: 5% auto;
+    padding-top: 10%;
+  }
+
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+        padding-left: 0;
+  }
+
+  /* Image Side */
+  .about-image img {
+    width: 90%;
+    height: 35vh;
+  }
+
+  .experience-badge {
+    bottom: -30px;
+    right: -1px;
+  }
+
+  .experience-badge .years {
+    font-size: 20px;
+  }
+
+  .experience-badge .exp {
+    font-size: 13px;
+  }
+
+  /* Content Side */
+  .about-content {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .sub-title {
+    letter-spacing: 5px;
+    margin-bottom: 1%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .about-content h2 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .about-btn {
+    font-size: 15px;
+    padding: 4% 2%;
+    border-radius: 8px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .services-sector .section-header h2 {
+    font-size: 24px;
+  }
+  .services-sector .section-header p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 18px;
+  }
+
+  .service-btn {
+    display: inline-block;
+    width: auto;
+    padding: 8px 14px;
+  }
+
+
+  
+/* Service Section */
+.services-sector{
+  margin-top: 15%;
+      width: 100%;
+    /* margin: auto; */
 }
 
-.hero-block {
-  width: 90%;
-  padding-left: 2%;
-  margin-left: 3%;
-  padding-bottom: 1%;
-}
-
-.hero-block span {
-  font-size: 13px;
-}
-
-.hero-block h2 {
-  font-size: 25px;
-}
-
-.hero-block h5 {
+.services-sector .section-header h2 {
   font-size: 15px;
+margin-bottom: 0%;
 }
 
-.hero-btns {
-  margin-top: 3%;
-  gap: 3%;
+
+.services-block {
+    gap: 15%;
+    padding: 8% 3% 4rem;
 }
 
-.hero-btns a {
-  font-size: 13px;
-  padding: 3% 5%;
-  border-radius: 8px;
+.country-card {
+    flex: 0 0 min(70vh, 95vw);
+    aspect-ratio: 4/ 4.5;
+
 }
 
-/* About Section */
-.about-sector {
-width: 90%;
-margin: 5% auto;
+.card-content h3 {
+    font-size: 15px;
 }
 
-.about-grid {
-  display: flex;
-  flex-direction: column;
-  /* gap: 100px; */
-}
-
-/* Image Side */
-.about-image img {
-  width: 90%;
-  height: 30vh;
-}
-
-.experience-badge {
-  bottom: -40px;
-  right: -5px;
-}
-
-.experience-badge .years {
-  font-size: 20px;
-}
-
-.experience-badge .exp{
-font-size: 13px;
-}
-
-/* Content Side */
-.about-content{
+.card-content p {
+    font-size: 12px;
     width: 100%;
 }
-.sub-title {
-  letter-spacing: 5px;
-  margin-bottom: 1%;
+
+.card-content .small, .small-p{
+      font-size: 12px;
+      width: 100%;
+}
+
+.service-btn{
+  font-size: 15px;
+  width: 100%;
+  margin-top: 3ch;
+}
+
+/* testimony */
+.testimony-sector{
+  padding-bottom: 8%;
+}
+
+.testimony-sector h3{
   font-size: 15px;
 }
 
-.about-content h2 {
-  font-size: 20px;
+.testimony-block{
+      padding: 3% 0;
+
 }
 
-.about-content p {
-  font-size: 14px;
+.testimony-container {
+    gap: 5%;
+          width: 100%;
+ padding-left: 2%;
 }
 
-.about-btn{
-  font-size: 15px;
-  padding: 4% 2%;
-  border-radius: 8px;
-  width: 60%;
-  text-align: center;
-  margin: auto;
+.testimony-block{
+           min-width: 95vw;
 }
 
+.testimony-block svg{
+  width: 6rem;
+}
+
+.testimony-block p {
+    font-size:1rem;
+    line-height: 1.5;
+}
+
+.testimony-block em {
+font-size: 15px;
+}
 
 }
