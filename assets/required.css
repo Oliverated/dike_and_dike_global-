@@ -17,7 +17,7 @@ img, video, svg {
 --accent: grey;
 --secondary-lit:#f9e8cf;
 --text:white;
---ff: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 :root {
@@ -27,6 +27,7 @@ img, video, svg {
   --secondary-lit: #C4E4F9;  /* A very light, clear blue for backgrounds, overlays, or borders */
   --text: #ffffff;           /* Set to white for use on dark primary or secondary backgrounds */
   --text-dark: #12284C;      /* Add this for standard text on a white website background */
+  --ff: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a{
@@ -86,7 +87,7 @@ header .harm {
 }
 
 nav {
-  background-color: #00000097;
+  background-color: #00235a98;
   backdrop-filter: blur(50px);
   position: fixed;
   top: 3vh;
@@ -122,7 +123,7 @@ nav .menu {
 
 .nav-list {
   display: flex;
-  gap: 40px;
+  gap: 10%;
   width: 40%;
 }
 
@@ -164,7 +165,7 @@ color: var(--text);
 } */
 /* elephant-sector */
 .elephant-sector{
-  background-image:linear-gradient(#8057000e, #0f0300), url(/asset/img/medium-shot-people-travel-agency.jpg);
+  background-image:linear-gradient(to left, #8057000e, rgba(0, 0, 0, 0.37),  #0f0300), url(/assets/img/Gemini_Generated_Image_dwiqyidwiqyidwiq.png);
   width: 100%;
   height: 80vh;
   background-size: cover;
@@ -172,7 +173,7 @@ color: var(--text);
   align-content: end;
   text-align: start;
   padding-left: 3%;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
   color: var(--text);
   /* background-position: ; */
 }
@@ -185,29 +186,28 @@ color: var(--text);
 .elephant-sector h2{
   color: var(--secondary);
   align-items: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .elephant-sector a{
   color: var(--secondary-lit);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .elephant-sector span{
   color: var(--secondary);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
   
 /* Footer Styles */
 footer {
-    background-color: #0f0f0f; /* Premium dark grey */
+    background-color: #00020f; 
     color: var(--text);
     padding-top: 3%;
     font-family: var(--ff);
-    /* margin-top: 80px; */
-    /* border-top removed as requested */
+    margin-top: 5%;
 }
 
 .footer-content {
@@ -224,8 +224,8 @@ footer {
 }
 
 .footer-section h3 {
-    font-size: 30px;
-    margin-bottom: 5%;
+    font-size: 25px;
+    margin-bottom: 3%;
     color: var(--secondary);
     position: relative;
     padding-bottom: 2%;
@@ -236,26 +236,34 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 50px;
+    width: 80px;
     height: 2px;
     background-color: var(--secondary); /* Changed to secondary for better visibility */
 }
 
 .footer-section.about{
     width: 35%;
-    /* background-color: aqua; */
 }
 
 .footer-section p {
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.4;
     margin-bottom: 20px;
     color: var();
     font-size: 20px;
 }
 
-.footer-section .highlight {
-    color: var(--secondary); 
+.footer-btn {
+  color: var(--secondary);
+  display: block;
+  width: fit-content;
+  font-size: 15px;
+  padding: 3% 6%;
+  border-radius: 8px;
+background-color: transparent;
+border: 2px solid var(--secondary);
+  align-items: center;
+
 }
 
 /* Social Icons */
@@ -266,19 +274,16 @@ footer {
 
 .socials a {
     color: white;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent for better blending */
-    width: 50px;
-    height: 50px;
+    width: 25px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    /* border: 1px solid transparent; */
 }
 
 .socials a:hover {
-    background: var(--primary);
+    color:  var(--secondary);
     transform: translateY(-5px);
 }
 
@@ -415,12 +420,12 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 8%;
+    margin-top: 1%;
     margin-left: 3%;
   }
 
   .nav-list li {
-    margin-top:3%;
+    margin-top:8%;
     width: 100%;
   }
 
@@ -428,6 +433,7 @@ footer {
     font-size: 20px;
     display: block;
     width: 100%;
+    
   }
 
   .nav-list a:hover::before {
@@ -460,10 +466,11 @@ footer {
   font-size: 15px;
 }
 
-
-
   /* Footer Styles */
-
+footer{
+  padding-top: 10%;
+  margin-top: 15%;
+}
 .footer-content {
     width:100%;
     margin: auto;
@@ -481,7 +488,10 @@ footer {
 
 .footer-section.about p{
     width: 80%;
-    /* background-color: aqua; */
+}
+
+.footer-btn {
+  padding: 2% 8%;
 }
 
 .footer-section p {
@@ -499,11 +509,6 @@ footer {
 .socials a {
     width: 30px;
     height: 30px;
-}
-
-.icon {
-    width: 35px;
-    padding: 10%;
 }
 
 /* Links */
@@ -533,14 +538,23 @@ footer {
 .nav-logo img {
     width: 25%;
 }
+
+
   .nav-list li {
-    margin-top: 1%;
-    margin-left: 10%;
+    margin-bottom: 15%;
+    margin-left: 5%;
   }
 
   .nav-list a {
     font-size: 15px;
   }
+
+  .elephant-sector{
+  width: 95%;
+  height: 50vh;
+  padding-left: 4%;
+  padding-bottom: 3%;
+}
 
   /* footer phone */
       
@@ -550,29 +564,30 @@ padding-top: 1%;
 }
   
 .footer-section h3 {
-    font-size: 15px;
-    margin-bottom: 1%;
+    font-size: 20px;
+    margin-bottom: 3%;
 }
 
 .footer-content p, .links ul li a{
-  font-size: 12px;
+  font-size: 15px;
 }
 
   .footer-section.contact p{
       line-height: .8;
       margin-top: 4%;
-   
+}
+
+
+.footer-btn {
+  padding: 3% 10%;
+border: 2px solid var(--secondary);
+
 }
 
 .socials a {
-    width: 50px;
-    height: 50px;
+    width: 20px;
 }
 
-.icon {
-    width: 30px;
-    height: 30px;
-}
 
 .footer-bottom {
     font-size: 12px;

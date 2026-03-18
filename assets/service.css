@@ -1,0 +1,111 @@
+/* Service Section */
+.services-sector {
+  width: 95%;
+  text-align: center;
+  padding-top: 1%;
+  margin-top: 5%;
+}
+.services-sector .section-header h2 {
+  font-size: 30px;
+}
+
+.services-block {
+  display: flex;
+  gap: 5%;
+  padding: 4% 3% 2.8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.country-card {
+  flex: 0 0 min(70vw, 450px);
+  aspect-ratio: 4/ 4;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  scroll-snap-align: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.country-card:focus-within,
+.country-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.55),
+    transparent
+  );
+  color: white;
+  z-index: 1;
+  transform: translateY(50px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+  opacity: 0;
+  /* padding-bottom: %; */
+}
+
+.country-card:hover .card-content,
+.country-card:focus-within .card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-content h3 {
+  font-size: 25px;
+  color: var(--secondary-lit);
+}
+
+.card-content p {
+  font-size: 15px;
+  border-top: 1px solid var(--text);
+  padding-top: 3%;
+  width: 95%;
+  margin: auto;
+  text-align: start;
+}
+
+.card-content .small,
+.small-p {
+  border-top: 10px solid var(--text);
+  font-size: 15px;
+}
+
+.service-btn {
+  color: var(--primary);
+  font-weight: bold;
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+  padding: 3% 6%;
+  border-radius: 10px;
+  background-color: var(--secondary-lit);
+  align-items: center;
+  width: 100%;
+  margin-top: 8%;
+}
+
+.country-card:hover .card-content p,
+.country-card:focus-within .card-content p {
+  opacity: 1;
+  transform: translateY(0);
+}

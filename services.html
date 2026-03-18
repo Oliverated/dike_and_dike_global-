@@ -3,294 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+     <link rel="stylesheet" href="assets/service.css">
+    <link rel="stylesheet" href="assets/required.css" />
+        <link rel="stylesheet" href="assets/main.css" />
+    <script defer src="assets/main.js"></script>
+        <link rel="icon" href="assets/img/IMG_20260311_132825_166.png">
+    <title>Services - Dike & Dike Global LTD</title>
+  </head>
 
+  <body>
+    <!-- nav > start -->
+    <div class="cover-bg"></div>
+    <header>
+      <span class="harm">&#9776;</span>
+      <nav>
+        <div class="menu">
+          <a class="nav-logo" href="/">
+            <img src="assets/img/IMG_20260311_132825_166.png" alt="Dike Logo" />
+            <span>Dike & Dike Global LTD</span>
+          </a>
 
+          <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-
-
-/* destination sector */
-.country-sector{
-    margin-top: 3%;
-}
-
-.country-block {
-    display: flex;
-    gap: 2rem;
-    /* flex-wrap: wrap; */
-    padding: 3% 2%;
-    scrollbar-width: none;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-
-/* Specific Grid Layout for Destinations Page */
-.destinations-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    padding: 3% 5%;
-    overflow: visible !important;
-    justify-content: center;
-}
-
-.destinations-grid .country-card {
-    min-width: auto;
-    /* Override fixed width */
-    width: 100%;
-}
-
-.country-card {
-    height: 400px;
-    min-width: 400px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    transition: .5s;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: center;
-    background-color: var(--secondary-lit);
-}
-
-.card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.991), transparent);
-    color: white;
-    z-index: 1;
-    transform: translateY(40px);
-    transition: transform 0.5s ease;
-}
-
-.country-card:hover .card-content {
-    transform: translateY(0);
-}
-
-.card-content h3 {
-    font-size: 1.2rem;
-    font-family: var(--ff);
-    margin-bottom: 5px;
-}
-
-.card-content p {
-    font-size: .8rem;
-    opacity: 0;
-    transition: opacity 0.5s ease 0.1s;
-    font-family: var(--ff);
-    height: 2rem;
-}
-
-.country-card:hover .card-content p {
-    opacity: 1;
-}
-
-/* Background Images */
-.country-card.kyoto {
-    background-image: url('tour-location/kyoto.jpg');
-}
-
-.country-card.egypt {
-    background-image: url('tour-location/egypt.jpg');
-}
-
-.country-card.london {
-    background-image: url('tour-location/london.jpg');
-}
-
-.country-card.nairobi {
-    background-image: url('tour-location/nairobi-easter.jpg');
-}
-
-.country-card.qatar {
-    background-image: url('tour-location/qatar.jpg');
-}
-
-.country-card.seychelles {
-    background-image: url('tour-location/seychelles.jpg');
-}
-
-.country-card.singapore {
-    background-image: url('tour-location/singapore.jpg');
-}
-
-
-
-
-
-
-
-
-
-        .services-sector{
-    padding:80px 10%;
-    background:var(--secondary-lit);
-}
-
-.services-title{
-    text-align:center;
-    font-size:2rem;
-    margin-bottom:50px;
-    font-family:var(--ff);
-}
-
-.services-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:25px;
-}
-
-.service-card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-5px);
-}
-
-.service-card h3{
-    margin-bottom:10px;
-    color:var(--primary);
-    font-size:1.2rem;
-}
-
-.service-card p{
-    font-size:.9rem;
-    color:#555;
-}
-    </style>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="stylesheet" href="assets/required.css" />
-  <script defer src="assets/main.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <!-- nav > start -->
-  <div class="cover-bg"></div>
-  <header>
-    <span class="harm">&#9776;</span>
-    <nav>
-      <div class="menu">
-        <a class="nav-logo" href="/">
-          <img src="assets/img/IMG_20260311_132825_166.png" alt="Dike Logo" />
-          <span>Dike & Dike Global LTD</span>
-        </a>
-
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <section class="elephant-sector">
+      <h2 class="elephant-title"> Our Services</h2>
+      <div class="elephant-nav"
+        ><a href="index.html">Home</a> | <span>Services</span></div
+      >
+    </section>
+    
+        <section class="services-sector">
+      <div class="section-header">
+        <span class="sub-title">Our Services</span>
+        <h2>Professional Plumbing Solutions</h2>
       </div>
-    </nav>
-  </header>
-
-
-
-    <section class="services-sector">
-    <h2 class="services-title">Our Plumbing & Borehole Materials</h2>
-
-    <div class="services-container">
-
-        <div class="service-card">
-            <h3>Water Closets (WC)</h3>
-            <p>Quality toilet systems suitable for residential and commercial buildings.</p>
+      <div class="services-block">
+        <div
+          class="country-card"
+          style="
+            background-image: url(assets/img/Gemini_Generated_Image_glawv2glawv2glaw.png);
+          "
+        >
+          <div class="card-content">
+            <h3>Preventive Maintenance</h3>
+            <p
+              >Scheduled upkeep to keep plumbing systems running efficiently and
+              minimize emergency repairs.</p
+            >
+          </div>
         </div>
 
-        <div class="service-card">
-            <h3>Bath Tubs</h3>
-            <p>Modern and durable bath tubs designed for comfort and luxury bathrooms.</p>
+        <div
+          class="country-card nairobi"
+          style="
+            background-image: url(assets/img/ChatGPT\ Image\ Mar\ 14\,\ 2026\,\ 11_02_30\ AM.png);
+          "
+        >
+          <div class="card-content">
+            <h3>Pipe Repair & Replacement</h3>
+            <p
+              >Experienced technicians repair cracked, corroded, and burst pipes
+              with high-quality materials.</p
+            >
+          </div>
         </div>
 
-        <div class="service-card">
-            <h3>Kitchen Sinks</h3>
-            <p>Strong stainless steel and ceramic sinks for modern kitchens.</p>
+        <div
+          class="country-card"
+          style="
+            background-image: url(assets/img/Gemini_Generated_Image_uxgc1suxgc1suxgc.png);
+          "
+        >
+          <div class="card-content">
+            <h3>Leak Detection</h3>
+            <p
+              >State-of-the-art diagnostic tools to locate hidden leaks quickly
+              and prevent further damage.</p
+            >
+          </div>
         </div>
 
-        <div class="service-card">
-            <h3>Wash Hand Basins</h3>
-            <p>Stylish WHB designs perfect for homes, hotels, and offices.</p>
-        </div>
+        <div
+          class="country-card"
+          style="
+            background-image: url(assets/img/Gemini_Generated_Image_dwiqyidwiqyidwiq.png);
+          "
+        >
+          <div class="card-content">
+            <h3>Repairs and Installations</h3>
+            <p>
+For Emergency Repairs, Installations, and Maintenance, We Offer Comprehensive Plumbing Solutions Tailored to Your Needs
+            </p>
 
-        <div class="service-card">
-            <h3>Water Heaters</h3>
-            <p>Efficient water heaters providing reliable hot water solutions.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>PVC & Copper Fittings</h3>
-            <p>Durable plumbing fittings suitable for all piping installations.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Sumo Pumps</h3>
-            <p>High-performance pumps for borehole and water supply systems.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Casing Pipes</h3>
-            <p>Strong borehole casing pipes designed for long-term durability.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Surface Pumps</h3>
-            <p>Reliable surface pumps for water transfer and pressure systems.</p>
-        </div>
-
-
-
-    </div>
-
-
-
-        <div class="country-block">
-      <div class="country-card" style="background-image: url(asset/img/car-g.jpg);">
-        <div class="card-content">
-          <h3>Exotic Transport</h3>
-          <p>We take you to where you want to be with cars that fits your status</p>
+            <a class="service-btn" href="https://wa.me/2347066071996">Contact Me Now</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="country-card nairobi" style="background-image: url(asset/img/pngwing.com\ \(25\).png);">
-        <div class="card-content">
-          <h3>Visa Assistance</h3>
-          <p>Our experts provide guidance to maximize your chances of approval.</p>
+    <section class="testimony-sector" id="testimony">
+      <h3>What Our Clients Say</h3>
+      <div class="testimony-container">
+        <div class="testimony-block">
+          <svg
+            class="icons"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path
+              d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path d="M10 7v6c0 2.667-1.333 4.333-4 5"></path>
+            <path d="M19 7v6c0 2.667-1.333 4.333-4 5"></path>
+          </svg>
+          <div class="testimony-text">
+            <p
+              >"I had a major leak in my kitchen that was causing water damage
+              to my floors. Dike & Dike showed up within an hour of my call and
+              fixed everything perfectly. The plumber was professional,
+              explained what he was doing, and even cleaned up after himself.
+              Best plumbing service I've ever used!"</p
+            >
+          </div>
+          <em>~ Mrs. Adebayo, Lagos</em>
+        </div>
+
+        <div class="testimony-block">
+          <svg
+            class="icons"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path
+              d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path d="M10 7v6c0 2.667-1.333 4.333-4 5"></path>
+            <path d="M19 7v6c0 2.667-1.333 4.333-4 5"></path>
+          </svg>
+          <div class="testimony-text">
+            <p
+              >"Our office building had a clogged drain that was backing up
+              sewage. It was an emergency situation and we needed it fixed
+              immediately. Dike & Dike's team worked through the night to clear
+              the blockage and repair the pipes. They were honest about the
+              problem and didn't try to upsell unnecessary work. Very
+              trustworthy company."</p
+            >
+          </div>
+          <em>~ Mr. Okafor, Business Owner</em>
+        </div>
+
+        <div class="testimony-block">
+          <svg
+            class="icons"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path
+              d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+            ></path>
+            <path d="M10 7v6c0 2.667-1.333 4.333-4 5"></path>
+            <path d="M19 7v6c0 2.667-1.333 4.333-4 5"></path>
+          </svg>
+          <div class="testimony-text">
+            <p
+              >"I needed a new water heater installed in my apartment. The guys
+              from Dike & Dike were punctual, brought all the right materials,
+              and did a clean installation. They tested everything to make sure
+              it worked properly and gave me tips on maintenance. The price was
+              fair too - no hidden charges. I'll definitely call them again."</p
+            >
+          </div>
+          <em>~ Chioma Nwosu, Apartment Resident</em>
+        </div>
+
+        <div class="testimony-block">
+        <svg
+              class="icons"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+              ></path>
+              <path
+                d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1"
+              ></path>
+              <path d="M10 7v6c0 2.667-1.333 4.333-4 5"></path>
+              <path d="M19 7v6c0 2.667-1.333 4.333-4 5"></path>
+            </svg>        
+          <div class="testimony-text">
+      
+            <p
+              >"When our borehole pump stopped working, we were worried we'd be
+              without water for days. Dike & Dike diagnosed the problem quickly
+              - it was a faulty capacitor - and had us back up and running
+              within hours. Their knowledge of borehole systems is impressive.
+              They even showed me how to maintain it to prevent future
+              issues."</p
+            >
+         
+          </div>
+             <em>~ Pastor David, Homeowner</em>
         </div>
       </div>
+    </section>
 
-      <div class="country-card egypt" style="background-image: url(asset/img/pngwing.com\ \(24\).png)">
-        <div class="card-content">
-          <h3>Flight Booking</h3>
-          <p>We handle all your flight arrangements.</p>
+        <!-- footer sector -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>Dike & Dike </span>Global LTD</h3>
+          <p>We specialize in advanced leak detection, pipe restoration, and industrial plumbing installations.</p>
+          <a class="footer-btn" href="#"> Contact Us Now </a>
+        </div>
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li
+              ><a href="about.html#faq">Frequiently Asked Questions(FAQ)</a></li
+            >
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#testimony">Testimonies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h3>Contact Us</h3>
+          <p
+            >Email:
+            <a href="mailto:info@winnertravel.com">info@winnertravel.com</a>
+          </p>
+          <p>Phone: <a href="tel:+2347066071996">+2347066071996</a></p>
+          <div class="socials">
+              <a href="https://www.facebook.com/share/1GJxTRsvss/?mibextid=LQQJ4d"
+                ><svg
+                  class="icons"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22.5 12.063c0-5.799-4.702-10.5-10.5-10.5s-10.5 4.7-10.5 10.5c0 5.24 3.84 9.584 8.86 10.373v-7.337H7.692v-3.037h2.666V9.75c0-2.63 1.568-4.085 3.966-4.085 1.15 0 2.351.205 2.351.205v2.584h-1.324c-1.304 0-1.712.81-1.712 1.64v1.97h2.912l-.465 3.036H13.64v7.337c5.02-.788 8.859-5.131 8.859-10.373Z"
+                    clip-rule="evenodd"
+                  ></path></svg
+              ></a>
+              <a href="www.tiktok.com/@ikennadike3"><svg class="icons" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.229 6.229 0 0 1-1.137-.966c-.849-.971-1.166-1.956-1.282-2.645h.004c-.097-.573-.057-.943-.05-.943h-3.865v14.943c0 .2 0 .399-.008.595 0 .024-.003.046-.004.073 0 .01 0 .022-.003.033v.009a3.28 3.28 0 0 1-1.65 2.604 3.226 3.226 0 0 1-1.6.422c-1.8 0-3.26-1.468-3.26-3.281 0-1.814 1.46-3.282 3.26-3.282.341 0 .68.054 1.004.16l.005-3.936a7.178 7.178 0 0 0-5.532 1.62 7.583 7.583 0 0 0-1.655 2.04c-.163.281-.779 1.412-.853 3.246-.047 1.04.266 2.12.415 2.565v.01c.093.262.457 1.158 1.049 1.913a7.855 7.855 0 0 0 1.674 1.58v-.01l.009.01c1.87 1.27 3.945 1.187 3.945 1.187.359-.015 1.562 0 2.928-.647 1.515-.718 2.377-1.787 2.377-1.787a7.43 7.43 0 0 0 1.296-2.153c.35-.92.466-2.022.466-2.462V8.273c.047.028.672.441.672.441s.9.577 2.303.952c1.006.267 2.363.324 2.363.324V6.153c-.475.052-1.44-.098-2.429-.59Z"></path>
+</svg></a>
+              <a href="https://www.instagram.com/dikeglobal?igsh=bTU3eTF4dnhpbjQ5&utm_source=qr"
+                ><svg
+                  class="icons"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.375 3.25a4.388 4.388 0 0 1 4.375 4.375v8.75a4.388 4.388 0 0 1-4.375 4.375h-8.75a4.389 4.389 0 0 1-4.375-4.375v-8.75A4.388 4.388 0 0 1 7.625 3.25h8.75Zm0-1.75h-8.75C4.256 1.5 1.5 4.256 1.5 7.625v8.75c0 3.369 2.756 6.125 6.125 6.125h8.75c3.369 0 6.125-2.756 6.125-6.125v-8.75c0-3.369-2.756-6.125-6.125-6.125Z"
+                  ></path>
+                  <path
+                    d="M17.688 7.625a1.313 1.313 0 1 1 0-2.625 1.313 1.313 0 0 1 0 2.625Z"
+                  ></path>
+                  <path
+                    d="M12 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm0-1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5Z"
+                  ></path></svg
+              ></a>
+              <a href="http://linkedin.com/in/dike-ikenna-5b607a149">
+                <svg class="icons" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path fill-rule="evenodd" d="M3.567 2.033c-.847 0-1.534.687-1.534 1.534v16.866c0 .847.687 1.534 1.534 1.534h16.866c.847 0 1.534-.687 1.534-1.534V3.567c0-.847-.687-1.534-1.534-1.534H3.567ZM5.177 9.7H8.09v9.2H5.177V9.7Zm3.105-3.059a1.648 1.648 0 1 1-3.297 0 1.648 1.648 0 0 1 3.297 0ZM18.9 13.314c0-2.767-1.789-3.843-3.566-3.843a3.376 3.376 0 0 0-1.68.353c-.394.198-.807.65-1.125 1.438h-.082V9.7H9.7v9.206h2.923V14.01c-.042-.502.118-1.15.446-1.536.329-.386.798-.478 1.155-.524h.11c.93 0 1.62.575 1.62 2.025v4.931h2.922l.024-5.593Z" clip-rule="evenodd"></path>
+</svg>
+              </a>
+          </div>
         </div>
       </div>
-
-      <div class="country-card london" style="background-image: url(asset/img/pngwing.com\ \(28\).png);">
-        <div class="card-content">
-          <h3>Hotel Reservation</h3>
-          <p>Stay in comfort. We partner with top-rated hotels worldwide.</p>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dike & Dike Global LTD. All rights reserved.</p>
       </div>
-
-      <div class="country-card london" style="background-image: url(asset/img/pngwing.com\ \(28\).png);">
-        <a href="services.html" class="card-content">
-          <h3>View All</h3>
-          <p>Checkout all our exclusive services</p>
-        </a>
-      </div>
-
-    </div>
-</section>
+    </footer>
 </body>
 </html>

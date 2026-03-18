@@ -89,3 +89,26 @@ faqItems.forEach((item) => {
     item.classList.toggle("active");
   });
 });
+
+// contact form - whatsapp integration
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let number = document.getElementById("number").value;
+    let message = document.getElementById("message").value;
+
+    let phone = "2347066071996"; // your WhatsApp number
+
+    let text = `Hello, my name is ${name}.
+My number is ${number}.
+${message}`;
+
+    let encodedText = encodeURIComponent(text);
+
+    let url = `https://wa.me/${phone}?text=${encodedText}`;
+
+    window.open(url, "_blank");
+});
+
