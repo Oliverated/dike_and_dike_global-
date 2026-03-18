@@ -16,23 +16,26 @@
   padding-top: 0;
 }
 
-.about-image img {
+/* .about-image img {
   width: 100%;
+  height:80vh ;
+  aspect-ratio: 1.3;
   border-radius: 10px;
-  box-shadow: 20px 20px 0px var(--secondary); /* Matches your brand accent color */
+  box-shadow: 20px 20px 0px var(--secondary-lit);
 }
-
+*/
 .experience-badge {
   position: absolute;
-  bottom: -30px;
-  right: 20px;
-  backdrop-filter: blur(80px);
+  /* bottom: -40px;
+  right: 20px; */
+  backdrop-filter: blur(50px);
+  background-color: #003c8674;
   color: var(--text);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 30px #00000076;
-}
+} 
 
 .experience-badge .years {
   display: block;
@@ -41,13 +44,13 @@
 }
 
 .experience-badge i {
-  color: var(--secondary-lit);
+  /* color: var(--secondary-lit); */
   opacity: 0.8;
 }
 
 .experience-badge .exp {
   font-size: 20px;
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 /* Content Side */
@@ -199,6 +202,30 @@
 }
 
 @media (max-width: 768px) {
+  .about-sector {
+  width: 100%;
+}
+
+.about-grid {
+  gap: 100px;
+
+}
+
+.about-content{
+  width: 90%;
+  margin: auto;
+}
+
+.about-content h2 {
+  font-size: 20px;
+}
+
+.about-content p {
+  font-size:15px;
+  line-height: 1.5;
+  margin-bottom: 2%;
+}
+
  .about-sector .about-btn {
   margin: auto;
   width: 90%;

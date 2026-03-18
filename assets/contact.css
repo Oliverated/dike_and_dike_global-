@@ -100,34 +100,70 @@ iframe{
     height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    
+/* contact */
+.contact-sector {
+    margin:15% auto;
+}
+
+.contact-header{
+    margin-bottom: 5%;
+    border-left: 5px solid var(--accent);
+    padding-left: 3%;
+}
+
+.contact-title{
+    font-size:35px;
+}
+
+.contact-sub{
+    font-size: 15px;
+    font-weight: normal;
+    opacity: .8;
+}
+
 .contact-block {
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
     width:100%;
 }
+
+.contact-form{
+    padding: 8% 0;
 }
 
-/* .contact-form button:hover {
-    background-color: var(--secondary);
-} */
-
-
-
-/* .contact-info-item h4 {
-    font-size: 25px;
-    color: var(--primary);
-    margin-bottom: 1%;
+.contact-form .input-block{
+    margin: auto;
+        width:90%;
 }
 
-.contact-info-item p{
-    font-size: 20px;
+.contact-form .input-block textarea {
+   height: 25vh;
 }
 
-.contact-info-item a{
-    color: black;
+.contact-form button {
+    margin-top: 5%;
 }
 
-.contact-info-item a svg{
-   width: 30px;
-} */
+.social-block{
+    border-top: 1px solid var(--accent);
+        width: 70%;
+       margin-top: 3%;
+}
+
+.social-block legend{
+    padding: 0 5% ;
+    font-size: 15px;
+         margin: 5% auto;
+}
+
+.social-block svg{
+    width: 35px;
+}
+
+.mapouter{
+    height: 60vh;
+}
+
+}

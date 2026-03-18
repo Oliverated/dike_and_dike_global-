@@ -79,20 +79,25 @@
 
 .about-image img {
   width: 100%;
+  height: 80vh;
   border-radius: 10px;
-  box-shadow: 20px 20px 0px var(--secondary); /* Matches your brand accent color */
+  aspect-ratio: 1.2;
+  box-shadow: 20px 20px 0px var(--secondary-lit); /* Matches your brand accent color */
 }
 
 .experience-badge {
   position: absolute;
   bottom: -30px;
   right: 20px;
-  backdrop-filter: blur(80px);
-  color: var(--text);
+  bottom: -40px;
+  right: 20px;
+  backdrop-filter: blur(50px);
+  background-color: #003c8674;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 30px #00000076;
+  color: var(--text);
 }
 
 .experience-badge .years {
@@ -502,7 +507,7 @@ font-size: 18px;
 /* Responsive adjustment MOBILE*/
 @media (max-width: 600px) {
   .hero-sector {
-    height: 50vh;
+    height: 50dvh;
     display: flex;
     padding-bottom: 5vh;
     background-position: left;
@@ -552,14 +557,21 @@ font-size: 18px;
   }
 
   /* Image Side */
+
   .about-image img {
-    width: 90%;
-    height: 35vh;
+    width: 95%;
+    height: 45vh;
+      border-radius: 10px;
+  aspect-ratio: 1.4;
+  box-shadow: 20px 20px 0px var(--secondary-lit);
   }
 
   .experience-badge {
-    bottom: -30px;
-    right: -1px;
+    bottom: -40px;
+    right:40px;
+      backdrop-filter: blur(50px);
+  background-color: #003c8674;
+  padding: 20px;
   }
 
   .experience-badge .years {
@@ -598,6 +610,7 @@ font-size: 18px;
     width: 90%;
     text-align: center;
     margin: auto;
+    margin-bottom: 5%;
   }
 
   .services-sector .section-header h2 {
@@ -665,7 +678,8 @@ margin-bottom: 0%;
 .service-btn{
   font-size: 15px;
   width: 100%;
-  margin-top: 3ch;
+  margin-top: 1%;
+padding: 5%;
 }
 
 /* testimony */
@@ -690,6 +704,7 @@ margin-bottom: 0%;
 
 .testimony-block{
            min-width: 95vw;
+           min-height: 400px;
 }
 
 .testimony-block svg{
@@ -698,7 +713,8 @@ margin-bottom: 0%;
 
 .testimony-block p {
     font-size:1rem;
-    line-height: 1.5;
+    line-height: 1.2;
+    margin-bottom: 15%;
 }
 
 .testimony-block em {
