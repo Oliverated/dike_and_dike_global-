@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,7 @@ min-height: 100dvh;
 min-width: 100%;
 left: 0px;
 bottom: 0px;
-  background-color: #ffffffc4;
+  background-color: #ffffff45;
   backdrop-filter: blur(100px);
   z-index: 100;
   display: grid;
@@ -32,7 +32,7 @@ bottom: 0px;
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 1px;
-  background: conic-gradient(#0000 10%,var(--primary)) content-box;
+  background: conic-gradient(#0000 10%,var(--secondary)) content-box;
   -webkit-mask:
     repeating-conic-gradient(#11111100 0deg,#000 1deg 20deg,#0000 21deg 36deg),
     radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
@@ -52,15 +52,6 @@ img, video, svg {
 }
 
 :root {
-  --primary: #9e2402 ;
---secondary: #fda831;
---accent: grey;
---secondary-lit:#f9e8cf;
---text:white;
-
-}
-
-:root {
   --primary: #284e8c;        /* The dark navy from "DIKE & DIKE" and the roof outline */
   --secondary: #0088CC;      /* The bright blue from the "GLOBAL LTD" banner and text */
   --accent: #58A7E0;         /* The medium blue found in the pipeline water and highlights */
@@ -68,6 +59,9 @@ img, video, svg {
   --text: #ffffff;           /* Set to white for use on dark primary or secondary backgrounds */
   --text-dark: #12284C;      /* Add this for standard text on a white website background */
   --ff: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --ff:"Roboto", sans-serif;
+
+
 }
 
 a{
