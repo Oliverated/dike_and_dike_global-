@@ -5,14 +5,19 @@ let harm_btn = document.querySelector(".harm");
 let nav_bar = document.querySelector("header nav");
 let nav_list = document.querySelectorAll(".nav-list a");
 let darkMode = localStorage.getItem("darkMode");
-let load_ctn = document.querySelector(".loading-ctn");
+let load_block = document.querySelector(".loader-block");
 let cancel_btn = document.querySelector(".cancel");
 let sections = document.querySelectorAll("section");
+
+// Disable scroll immediately
+document.body.classList.add("no-scroll");
+
 // Loader
-// setTimeout(() => {
-//   load_ctn.classList.add("clear");
-//   startTypewriter();
-// }, 2800);
+setTimeout(() => {
+  load_block.classList.add("clear");
+  // Enable scroll after loader disappears
+  document.body.classList.remove("no-scroll");
+}, 2800);
 
 // nav-bar
 
