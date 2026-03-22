@@ -692,11 +692,6 @@ padding: 5%;
   font-size: 15px;
 }
 
-.testimony-block{
-      padding: 3% 0;
-
-}
-
 .testimony-container {
     gap: 5%;
           width: 100%;
@@ -705,7 +700,8 @@ padding: 5%;
 
 .testimony-block{
            min-width: 95vw;
-           min-height: 400px;
+           min-height: 250px;
+                 padding: 3% 0;
 }
 
 .testimony-block svg{
