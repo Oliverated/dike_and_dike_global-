@@ -71,7 +71,7 @@
 }
 
 .card-content h3 {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--secondary-lit);
 }
 
@@ -109,3 +109,5 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+

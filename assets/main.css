@@ -81,7 +81,7 @@
   width: 100%;
   height: 80vh;
   border-radius: 10px;
-  aspect-ratio: 1.2;
+  aspect-ratio: 1.1;
   box-shadow: 20px 20px 0px var(--secondary-lit); /* Matches your brand accent color */
 }
 
@@ -222,7 +222,7 @@ margin: auto;
 }
 
 .card-content h3 {
-    font-size: 25px;
+    font-size: 20px;
     color: var(--secondary-lit);
 }
 
@@ -293,7 +293,7 @@ margin: auto;
     border-radius:10px;
 margin: 1% 0.1%;
     min-width: 420px;
-    max-height: 500px;
+    max-height: 300px;
     padding-bottom: 2%;
         scroll-snap-align: center;
 }

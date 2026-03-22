@@ -88,6 +88,7 @@
 .social-block svg{
     width: 30px;
     color: var(--secondary);
+    margin: 0 3%;
 }
 
 .mapouter{
